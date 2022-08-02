@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste com Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bgBody">
+    <h1 class="text-center">Form</h1>
+    <form class="form">
+      <div class="form-field">
+        <label class="userName">
+          <p>Nome de usuário</p>
+        </label>
+        <input
+          class="userNameInput"
+          type="text"
+          required
+          oninvalid="this.setCustomValidity('Campo obrigatório')"
+          onchange="try{setCustomValidity('')}catch(e){}"
+        />
+      </div>
+      <div class="form-field">
+        <label class="email">
+          <p>E-mail</p>
+        </label>
+        <input class="emailInput" type="email" required />
+      </div>
+      <div class="form-field">
+        <label class="senha">
+          <p>Senha</p>
+        </label>
+        <input
+          class="senhaInput"
+          type="password"
+          required
+          oninvalid="this.setCustomValidity('Campo obrigatório')"
+          onchange="try{setCustomValidity('')}catch(e){}"
+          oninput="limpaMsg()"
+        />
+      </div>
+      <div class="form-field">
+        <label class="confirmaSenha">
+          <p>Confirmar senha</p>
+        </label>
+        <input
+          class="confirmaSenhaInput"
+          type="password"
+          required
+          oninvalid="this.setCustomValidity('Campo obrigatório')"
+          onchange="try{setCustomValidity('')}catch(e){}"
+          oninput="validarSenha()"
+        />
+      </div>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
